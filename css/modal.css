@@ -412,3 +412,172 @@ button[class*="inline-flex"] svg {
     width: 1rem;
     flex-shrink: 0;
 }
+
+
+/* Estilos para el modal RSVP */
+#rsvp-modal.hidden { display: none; } 
+#rsvp-modal .modal-content { max-width: 400px; width: 90%; } 
+#rsvp-form input { width: 100%; margin-bottom: 1rem; padding: 0.5rem; border-radius: 0.5rem; border: 1px solid var(--buff); } 
+.modal-buttons { display: flex; justify-content: flex-end; gap: 0.5rem; } 
+#rsvp-send { background: var(--buff); color: #fff; }
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background: linear-gradient(to bottom right, var(--cornsilk), var(--papaya-whip));
+    padding: 2rem;
+    border-radius: 20px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    border: 3px solid var(--buff);
+}
+
+.modal header {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.modal h2 {
+    color: var(--buff);
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--buff);
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.modal label {
+    font-weight: bold;
+    color: #333;
+}
+
+.modal input {
+    padding: 0.8rem;
+    border: 2px solid var(--buff);
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.modal-buttons button {
+    flex: 1;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#rsvp-cancel {
+    background-color: #f0f0f0;
+    color: #666;
+}
+
+#rsvp-send {
+    background-color: var(--buff);
+    color: white;
+}
+
+.modal-buttons button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.about-btn {
+    background-color: var(--buff);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.about-btn:hover {
+    transform: translateY(-2px);
+    background-color: color-mix(in srgb, var(--buff) 90%, white);
+}
+
+.about-section {
+    padding: 20px;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    border: 4px solid var(--buff);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+@media (max-width: 768px) {
+    .about-image {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+.modal-buttons button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}

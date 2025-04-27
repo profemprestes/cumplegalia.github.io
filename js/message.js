@@ -1,8 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
     const openMessageBtn = document.getElementById('open-message-btn');
     const messageModal = document.getElementById('message-modal');
-    const closeMessageBtn = document.getElementById('close-message-btn');
+    const closeMessageBtn = messageModal ? messageModal.querySelector('.modal-close') : null;
     const cancelMessageBtn = document.getElementById('cancel-message-btn');
+    const form = messageModal ? messageModal.querySelector('form') : null;
+
+    // Only proceed if we have the required elements
+    if (!messageModal || !openMessageBtn) {
+        console.warn('Required message modal elements not found');
+        return;
+    }
 
     function openModal() {
         messageModal.classList.remove('hidden');
@@ -22,8 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
     openMessageBtn.addEventListener('click', openModal);
 
     // Close modal when close or cancel button is clicked
-    closeMessageBtn.addEventListener('click', closeModal);
-    cancelMessageBtn.addEventListener('click', closeModal);
+    if (closeMessageBtn) closeMessageBtn.addEventListener('click', closeModal);
+    if (cancelMessageBtn) cancelMessageBtn.addEventListener('click', closeModal);
 
     // Close modal if clicked outside of content
     messageModal.addEventListener('click', (event) => {
@@ -40,13 +47,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Form submission handler
-    const form = messageModal.querySelector('form');
-    form.addEventListener('submit', (event) => {
-        // Permitir que Netlify maneje el envío
-        // Solo mostrar confirmación y cerrar modal
-        alert('¡Gracias por tu mensaje! Lo recibiremos pronto.');
-        closeModal();
-        form.reset();
-    });
+    if (form) {
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            alert('¡Gracias por tu mensaje! Lo recibiremos pronto.');
+            closeModal();
+            form.reset();
+        });
+    }
 });
-

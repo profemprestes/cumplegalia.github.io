@@ -59,12 +59,58 @@
     padding: 1rem;
     border-radius: 10px;
     font-weight: bold;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    transform: rotate(-1deg);
+    transition: transform 0.3s ease;
+}
+
+.highlight:hover {
+    transform: rotate(1deg) scale(1.03);
+}
+
+.highlight p {
+    margin: 0;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 }
 
 .contact-buttons {
     display: flex;
     justify-content: center;
     gap: 10px;
+    flex-wrap: wrap;
+}
+
+.contact-buttons button {
+    background-color: var(--buff);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.contact-buttons button:hover {
+    transform: translateY(-3px);
+    background-color: #c99c67;
+}
+
+/* Mejoras responsive */
+@media (max-width: 768px) {
+    .celebration-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .highlight {
+        transform: rotate(0);
+    }
+    
+    .highlight:hover {
+        transform: scale(1.02);
+    }
 }
 
 button {

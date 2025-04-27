@@ -160,22 +160,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Ajustar el número de partículas según el tamaño de la pantalla
     function adjustParticlesForScreenSize() {
+        // Check if pJSDom is defined and has the expected structure
         if (window.pJSDom && window.pJSDom[0] && window.pJSDom[0].pJS) {
-            const width = window.innerWidth;
-            let particleCount = 200; // valor predeterminado
-            
-            if (width < 480) {
-                particleCount = 100;
-            } else if (width < 768) {
-                particleCount = 150;
-            }
-            
-            window.pJSDom[0].pJS.particles.number.value = particleCount;
+            // Now it's safe to access pJSDom[0].pJS
             window.pJSDom[0].pJS.fn.particlesRefresh();
         }
     }
 
-    // Ejecutar al cargar y al cambiar el tamaño de la ventana
-    adjustParticlesForScreenSize();
-    window.addEventListener('resize', adjustParticlesForScreenSize);
+    // Make sure the DOM is fully loaded before initializing particles
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize particles only if the element exists
+        if (document.getElementById('particles-js')) {
+            // Initialize particles.js
+            particlesJS('particles-js', {
+                // Your particles configuration
+            });
+            
+            // Add resize event listener
+            window.addEventListener('resize', adjustParticlesForScreenSize);
+        }
+    });
 });

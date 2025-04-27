@@ -1,0 +1,109 @@
+
+    <button id="open-about-btn">Sobre mí</button>
+
+    <div id="about-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <section class="about-section">
+                <h2>Un poco sobre mí</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="https://galiacumple.netlify.app/_next/image?url=%2FGaliaHero1.gif&w=256&q=75" alt="Galia sonriendo">
+                    </div>
+                    <div class="about-text space-y-4">
+                        <p class="flex items-center gap-3">
+                            <img src="public/icons/smile.svg" class="lucide lucide-smile h-5 w-5 text-yellow-500 flex-shrink-0" alt="Sonrisa">
+                            ¡Hola! Soy <strong>Galia</strong> 💖
+                        </p>
+                        <p class="flex items-center gap-3">
+                            <img src="public/icons/baby.svg" class="lucide lucide-baby h-5 w-5 text-blue-400 flex-shrink-0" alt="Bebé">
+                            Nací el <strong>10/05/2024</strong>
+                        </p>
+                        <p class="flex items-center gap-3">
+                            <img src="public/icons/ruler.svg" class="lucide lucide-ruler h-5 w-5 text-green-500 flex-shrink-0" alt="Regla">
+                            <span>Me gusta salir a pasear, mirar <strong>árboles</strong> y robar <strong>hojas</strong> 🍃</span>
+                        </p>
+                        <p class="flex items-start gap-3">
+                            <img src="public/icons/search.svg" class="lucide lucide-search h-5 w-5 text-gray-500 flex-shrink-0 mt-1" alt="Búsqueda">
+                            <span>Soy muy curiosa, ¡me encanta <strong>investigar todo</strong>!</span>
+                        </p>
+                        <p class="flex items-start gap-3">
+                            <img src="public/icons/smile.svg" class="lucide lucide-smile h-5 w-5 text-yellow-500 flex-shrink-0 mt-1" alt="Sonrisa">
+                            <span>Siempre ando <strong>sonriendo</strong>, mostrando mis dientitos y dando muchos <strong>besos</strong> 😘</span>
+                        </p>
+                        <p class="italic text-muted-foreground mt-5 text-center text-sm sm:text-base">Espero que esta guía sobre mí te sirva, pero lo que más me gusta es que me regales tu tiempo 💕.</p>
+                    </div>
+                    
+                    <div class="space-y-4 bg-secondary/10 p-4 sm:p-5 rounded-lg border border-secondary/30 shadow-inner">
+                        <h4 class="font-semibold text-lg sm:text-xl text-secondary-foreground flex items-center gap-2 mb-3">
+                            <img src="public/icons/gift.svg" class="h-5 w-5 sm:h-6 sm:w-6" alt="Regalo">
+                            Regalito (Opcional)
+                        </h4>
+                        <p id="r1" class="text-sm sm:text-base text-secondary-foreground/80">Si prefieres hacer un regalo monetario, mis papis facilitan esta opción:</p>
+                        <div class="flex items-start space-x-3 p-3 sm:p-4 bg-card rounded border border-secondary/40 shadow-sm">
+                            <img src="public/icons/landmark.svg" class="h-8 w-8 sm:h-10 sm:w-10 text-secondary mt-1 flex-shrink-0" aria-hidden="true" alt="Banco">
+                            <div class="flex-grow">
+                                <div class="mb-2">
+                                    <p class="text-xs font-medium text-muted-foreground mb-0.5">Banco</p>
+                                    <p class="font-semibold text-card-foreground text-base sm:text-lg">BROU</p>
+                                </div>
+                                <div class="mb-2">
+                                    <p class="text-xs font-medium text-muted-foreground mt-2 mb-0.5">Titular</p>
+                                    <p class="font-semibold text-card-foreground text-base sm:text-lg">MAURO PRESTES</p>
+                                </div>
+                                <div class="mb-2">
+                                    <p class="text-xs font-medium text-muted-foreground mt-2 mb-0.5">Número de Cuenta</p>
+                                    <div class="flex items-center gap-2 flex-wrap"> 
+                                        <p class="font-semibold text-card-foreground text-base sm:text-lg tabular-nums break-all">001782901-00001</p>
+                                        <button class="copy-button inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-8 w-8 text-secondary hover:bg-secondary/10 flex-shrink-0">
+                                            <img src="public/icons/copy.svg" class="h-4 w-4" alt="Copiar">
+                                            <span class="sr-only">Copiar número de cuenta</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-medium text-muted-foreground mt-2 mb-0.5">Moneda</p>
+                                    <p class="font-semibold text-card-foreground text-base sm:text-lg">Pesos Uruguayos ($)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-sm sm:text-base text-center text-secondary-foreground/80 mt-3">¡Tu presencia es el mejor regalo! 🎁</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Send a Message Button -->
+    <button id="open-message-btn" aria-label="Enviar un Mensaje">
+      Enviar un Mensaje
+    </button>
+
+    <!-- Send a Message Modal -->
+    <div id="message-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="message-modal-title" aria-describedby="message-modal-desc">
+      <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <section class="message-section">
+          <h2 id="message-modal-title">Deja tu Mensaje para Galia</h2>
+          <p id="message-modal-desc">Comparte tus buenos deseos o un lindo recuerdo. </p>
+          
+          <form name="contact-galia" method="POST" netlify>
+            <input type="hidden" name="form-name" value="contact-galia">
+            
+            <label for="guestName">Tu Nombre</label>
+            <input id="guestName" name="name" type="text" placeholder="Tu nombre o familia" required>
+            
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" rows="4" placeholder="Escribe aquí tu mensaje..." required></textarea>
+            
+            <label for="photo">Sube una Foto (Opcional)</label>
+            <input id="photo" name="photo" type="file" accept="image/*">
+            
+            <div class="modal-buttons">
+              <button type="button" id="cancel-message-btn">Cancelar</button>
+              <button type="submit">Enviar Mensaje</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>

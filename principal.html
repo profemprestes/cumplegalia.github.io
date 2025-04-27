@@ -3,11 +3,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>¡Galia cumple 1 año!</title>
+    
+    <!-- Fuentes y estilos base -->
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Estilos globales y base -->
     <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/hero-enhanced.css">
+    
+    <!-- Componentes específicos -->
     <link rel="stylesheet" href="css/countdown.css">
     <link rel="stylesheet" href="css/celebration.css">
+    
+    <!-- Modales y elementos interactivos (últimos para sobrescribir) -->
     <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/message.css">
+    
+    <!-- Meta tags adicionales -->
+    <meta name="description" content="Invitación al primer cumpleaños de Galia">
+    <meta name="theme-color" content="#f8bbd0">
+    <link rel="manifest" href="public/manifest.json">
+    
+    <!-- Precargar recursos críticos -->
+    <link rel="preload" href="public/GaliaHero.svg" as="image">
+    
+    <!-- Librerías externas -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
     <div id="particles-js"></div>
@@ -21,6 +43,7 @@
             <div class="hero-text">
                 <h2 class="hero-subtitle">¡Acompáñame a celebrar!</h2>
                 <h1 class="hero-title">Soy Galia<br>Cumplo mi primer añito</h1>
+             
                 <div class="hero-details">
                     <div class="hero-details-container">
                         <div class="hero-detail-item">
@@ -89,7 +112,7 @@
                 </div>
 
                 <div class="highlight">
-                    <!-- Removed the text as requested -->
+                    <p>¡Habrá juegos, pastel y diversión!</p>
                 </div>
 
                 <div class="location">
@@ -111,13 +134,69 @@
         </div>
     </section>
 
-    <button id="open-about-btn">Sobre mí</button>
+    <!-- RSVP Modal --> 
+    <div id="rsvp-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="rsvp-title" aria-describedby="rsvp-desc"> 
+        <div class="modal-content"> 
+            <header> 
+                <h2 id="rsvp-title">Confirmar Asistencia</h2> 
+                <button class="modal-close" aria-label="Cerrar">&times;</button> 
+            </header> 
+            <p id="rsvp-desc">¡Nos encantaría que vengas! 😊<br>Por favor, ingresa tu nombre y la cantidad de personas que asistirán al cumpleaños de Galia.</p> 
+            <form id="rsvp-form"> 
+                <label for="rsvp-name">Tu Nombre</label> 
+                <input id="rsvp-name" name="name" type="text" placeholder="Ej: Familia González" required> 
+                <label for="rsvp-count">Cantidad de Personas</label> 
+                <input id="rsvp-count" name="count" type="number" min="1" value="1" required> 
+                <div class="modal-buttons"> 
+                    <button type="button" id="rsvp-cancel">Cancelar</button> 
+                    <button type="submit" id="rsvp-send">Confirmar y Enviar WhatsApp</button> 
+                </div> 
+            </form> 
+        </div> 
+    </div>
 
-    <div id="about-modal" class="modal">
+   
+
+    <!-- Send a Message Button -->
+    <button id="open-message-btn" aria-label="Enviar un Mensaje">
+        Enviar un Mensaje
+      </button>
+  
+      <!-- Send a Message Modal -->
+      <div id="message-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="message-modal-title" aria-describedby="message-modal-desc">
+        <div class="modal-content">
+          <button class="modal-close">&times;</button>
+          <section class="message-section">
+            <h2 id="message-modal-title">Deja tu Mensaje para Galia</h2>
+            <p id="message-modal-desc">Comparte tus buenos deseos o un lindo recuerdo. </p>
+            
+            <form name="contact-galia" method="POST" netlify>
+              <input type="hidden" name="form-name" value="contact-galia">
+              
+              <label for="guestName">Tu Nombre</label>
+              <input id="guestName" name="name" type="text" placeholder="Tu nombre o familia" required>
+              
+              <label for="message">Mensaje</label>
+              <textarea id="message" name="message" rows="4" placeholder="Escribe aquí tu mensaje..." required></textarea>
+              
+              <label for="photo">Sube una Foto (Opcional)</label>
+              <input id="photo" name="photo" type="file" accept="image/*">
+              
+              <div class="modal-buttons">
+                <button type="button" id="cancel-message-btn">Cancelar</button>
+                <button type="submit">Enviar Mensaje</button>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
+
+    <!-- About Modal -->
+    <div id="about-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="about-modal-title">
         <div class="modal-content">
             <button class="modal-close">&times;</button>
             <section class="about-section">
-                <h2>Un poco sobre mí</h2>
+                <h2 id="about-modal-title">Un poco sobre mí</h2>
                 <div class="about-content">
                     <div class="about-image">
                         <img src="https://galiacumple.netlify.app/_next/image?url=%2FGaliaHero1.gif&w=256&q=75" alt="Galia sonriendo">
@@ -165,7 +244,7 @@
                                 </div>
                                 <div class="mb-2">
                                     <p class="text-xs font-medium text-muted-foreground mt-2 mb-0.5">Número de Cuenta</p>
-                                    <div class="flex items-center gap-2 flex-wrap"> 
+                                    <div class="flex items-center gap-2 flex-wrap">
                                         <p class="font-semibold text-card-foreground text-base sm:text-lg tabular-nums break-all">001782901-00001</p>
                                         <button class="copy-button inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-8 w-8 text-secondary hover:bg-secondary/10 flex-shrink-0">
                                             <img src="public/icons/copy.svg" class="h-4 w-4" alt="Copiar">
@@ -185,47 +264,21 @@
             </section>
         </div>
     </div>
+    <button id="open-about-btn" class="about-btn">Sobre mí</button>
 
-    <!-- Send a Message Button -->
-    <button id="open-message-btn" aria-label="Enviar un Mensaje">
-      Enviar un Mensaje
-    </button>
-
-    <!-- Send a Message Modal -->
-    <div id="message-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="message-modal-title" aria-describedby="message-modal-desc">
-      <div class="modal-content">
-        <button class="modal-close">&times;</button>
-        <section class="message-section">
-          <h2 id="message-modal-title">Deja tu Mensaje para Galia</h2>
-          <p id="message-modal-desc">Comparte tus buenos deseos o un lindo recuerdo. </p>
-          
-          <form name="contact-galia" method="POST" netlify>
-            <input type="hidden" name="form-name" value="contact-galia">
-            
-            <label for="guestName">Tu Nombre</label>
-            <input id="guestName" name="name" type="text" placeholder="Tu nombre o familia" required>
-            
-            <label for="message">Mensaje</label>
-            <textarea id="message" name="message" rows="4" placeholder="Escribe aquí tu mensaje..." required></textarea>
-            
-            <label for="photo">Sube una Foto (Opcional)</label>
-            <input id="photo" name="photo" type="file" accept="image/*">
-            
-            <div class="modal-buttons">
-              <button type="button" id="cancel-message-btn">Cancelar</button>
-              <button type="submit">Enviar Mensaje</button>
-            </div>
-          </form>
-        </section>
-      </div>
-    </div>
-
+    <!-- Scripts base -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.min.js"></script>
+    
+    <!-- Librería de animaciones -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    
+    <!-- Scripts de la aplicación -->
     <script src="js/index.js"></script>
-    <script src="js/countdown.js" defer></script>
-    <script src="js/celebration.js" defer></script>
-    <script src="js/modal.js" defer></script>
-    <script src="js/message.js" defer></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/celebration.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/message.js"></script>
+    <script src="js/about.js"></script>
 </body>
 </html>
