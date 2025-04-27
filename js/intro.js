@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Botón de continuar
     if (continueBtn) {
         continueBtn.addEventListener('click', () => {
-            window.location.href = 'index.html';
+            window.location.href = 'principal.html';
         });
     }
 });
