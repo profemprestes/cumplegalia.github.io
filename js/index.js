@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
         particlesJS("particles-js", {
             "particles": {
                 "number": {
-                    "value": 400,
+                    "value": 200,
                     "density": {
                         "enable": true,
                         "value_area": 800
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 },
                 "opacity": {
-                    "value": 0.5,
+                    "value": 0.6,
                     "random": true,
                     "anim": {
                         "enable": false,
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 },
                 "size": {
-                    "value": 10,
+                    "value": 12,
                     "random": true,
                     "anim": {
                         "enable": false,
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
                 "move": {
                     "enable": true,
-                    "speed": 6,
+                    "speed": 4,
                     "direction": "bottom",
                     "random": false,
                     "straight": false,
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     },
                     "bubble": {
                         "distance": 400,
-                        "size": 4,
+                        "size": 6,
                         "duration": 0.3,
                         "opacity": 1,
                         "speed": 3
@@ -124,11 +124,58 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollIndicator = document.querySelector('.scroll-indicator');
     if (scrollIndicator) {
         scrollIndicator.addEventListener('click', () => {
-            // Smooth scroll to next section or bottom of page
+            // Smooth scroll to next section
             window.scrollTo({
                 top: window.innerHeight,
                 behavior: 'smooth'
             });
         });
     }
+
+    // Añadir efectos de hover a los elementos de detalle
+    const detailItems = document.querySelectorAll('.hero-detail-item');
+    detailItems.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            item.style.transform = 'scale(1.05)';
+        });
+        item.addEventListener('mouseleave', () => {
+            item.style.transform = 'scale(1)';
+        });
+    });
+
+    // Añadir efecto de parallax suave al mover el ratón
+    const heroContent = document.querySelector('.hero-content');
+    document.addEventListener('mousemove', (e) => {
+        if (heroContent && window.innerWidth > 768) {
+            const x = (window.innerWidth / 2 - e.clientX) / 50;
+            const y = (window.innerHeight / 2 - e.clientY) / 50;
+            heroContent.style.transform = `translate(${x}px, ${y}px)`;
+        } else if (heroContent && window.innerWidth <= 768) {
+            // Efecto más sutil para dispositivos móviles
+            const x = (window.innerWidth / 2 - e.clientX) / 100;
+            const y = (window.innerHeight / 2 - e.clientY) / 100;
+            heroContent.style.transform = `translate(${x}px, ${y}px)`;
+        }
+    });
+
+    // Ajustar el número de partículas según el tamaño de la pantalla
+    function adjustParticlesForScreenSize() {
+        if (window.pJSDom && window.pJSDom[0] && window.pJSDom[0].pJS) {
+            const width = window.innerWidth;
+            let particleCount = 200; // valor predeterminado
+            
+            if (width < 480) {
+                particleCount = 100;
+            } else if (width < 768) {
+                particleCount = 150;
+            }
+            
+            window.pJSDom[0].pJS.particles.number.value = particleCount;
+            window.pJSDom[0].pJS.fn.particlesRefresh();
+        }
+    }
+
+    // Ejecutar al cargar y al cambiar el tamaño de la ventana
+    adjustParticlesForScreenSize();
+    window.addEventListener('resize', adjustParticlesForScreenSize);
 });
