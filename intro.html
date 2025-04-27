@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenidos a la aventura de Galia</title>
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="intro.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="container">
+        <div class="birthday-card">
+            <div class="birthday-card-header">
+                <h1>¡Galia cumple 1 año!</h1>
+            </div>
+            
+            <div class="birthday-card-content">
+                <div class="gallery">
+                    <div class="gallery-image active" data-index="0">
+                        <img src="https://via.placeholder.com/300x300?text=Galia+1" alt="Galia 1">
+                    </div>
+                    <div class="gallery-image" data-index="1">
+                        <img src="https://via.placeholder.com/300x300?text=Galia+2" alt="Galia 2">
+                    </div>
+                    <div class="gallery-image" data-index="2">
+                        <img src="https://via.placeholder.com/300x300?text=Galia+3" alt="Galia 3">
+                    </div>
+                </div>
+
+                <p class="birthday-message">¡Bienvenidos a la aventura de Galia!</p>
+                <p class="click-hint">(Haz clic para ver los detalles)</p>
+            </div>
+
+            <button id="continue-btn">Continuar</button>
+        </div>
+        <div class="count-particles">
+            <span class="js-count-particles">--</span> particles
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.min.js"></script>
+    <script src="intro.js"></script>
+</body>
+</html>

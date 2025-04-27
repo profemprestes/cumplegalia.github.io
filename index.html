@@ -1,0 +1,199 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Galia cumple 1 año!</title>
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/countdown.css">
+    <link rel="stylesheet" href="css/celebration.css">
+    <link rel="stylesheet" href="css/modal.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="hero-section">
+        <div class="hero-content">
+            <div class="hero-image">
+                <img src="public/GaliaHero.svg" alt="Galia sonriendo">
+            </div>
+            <div class="hero-text">
+                <h2 class="hero-subtitle">¡Acompáñame a celebrar!</h2>
+                <h1 class="hero-title">Soy Galia<br>Cumplo mi primer añito</h1>
+                <div class="hero-details">
+                    <div class="hero-details-container">
+                        <div class="hero-detail-item">
+                            <svg class="hero-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                            <span>Club Ciclista Juanico</span>
+                        </div>
+                        <span class="hero-details-separator">|</span>
+                        <div class="hero-detail-item">
+                            <svg class="hero-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                            </svg>
+                            <span>Sábado, 10 de Mayo, 2025</span>
+                        </div>
+                        <span class="hero-details-separator">|</span>
+                        <div class="hero-detail-item">
+                            <svg class="hero-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                            <span>13:00 - 18:00</span>
+                        </div>
+                    </div>
+                    <p class="hero-invitation">¡Tu presencia hará este día aún más especial!</p>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Desliza para ver más</span>
+            <div class="scroll-arrow-container">
+                <div class="scroll-arrow"></div>
+            </div>
+        </div>
+    </div>
+
+    <section id="countdown">
+        <div class="countdown-container">
+            <div class="time-segment">
+                <span class="number" id="days">00</span>
+                <span class="label">Días</span>
+            </div>
+            <div class="time-segment">
+                <span class="number" id="hours">00</span>
+                <span class="label">Horas</span>
+            </div>
+            <div class="time-segment">
+                <span class="number" id="minutes">00</span>
+                <span class="label">Minutos</span>
+            </div>
+            <div class="time-segment">
+                <span class="number" id="seconds">00</span>
+                <span class="label">Segundos</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="celebration-section">
+        <div class="celebration-container">
+            <h2>¡Acompáñame a celebrar!</h2>
+            
+            <div class="celebration-content">
+                <div class="details">
+                    <h3>Detalles de la Fiesta</h3>
+                    <p>
+                        <svg class="celebration-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                        Fecha: Sábado, 10 de Mayo, 2025
+                    </p>
+                    <p>
+                        <svg class="celebration-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                        Hora: 1:00 PM – 6:00 PM
+                    </p>
+                </div>
+
+                <div class="highlight">
+                    <!-- Removed the text as requested -->
+                </div>
+
+                <div class="location">
+                    <h3>Ubicación</h3>
+                    <p>Club Ciclista Juanico</p>
+                    <button id="maps-button" aria-label="Abrir ubicación en Google Maps">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        Ver en Google Maps
+                    </button>
+                </div>
+
+                <div class="contact">
+                    <h3>Asistencia y Contacto</h3>
+                    <div class="contact-buttons">
+                        <button id="confirm-attendance">Confirmar Asistencia</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <button id="open-about-btn">Sobre mí</button>
+
+    <div id="about-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <section class="about-section">
+                <h2>Un poco sobre mí</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="https://galiacumple.netlify.app/_next/image?url=%2FGaliaHero1.gif&w=256&q=75" alt="Galia sonriendo">
+                    </div>
+                    <div class="about-text">
+                        <p>¡Hola! Soy Galia, una pequeña aventurera que está a punto de cumplir su primer añito. Cada día es una nueva oportunidad para explorar, aprender y sonreír.</p>
+                        <p>Me encanta jugar, descubrir el mundo que me rodea y pasar tiempo con mi familia. Mis días están llenos de risas, juegos y momentos mágicos.</p>
+                        <p>Estoy emocionada de celebrar mi primer cumpleaños con todos ustedes. ¡Será un día lleno de amor, diversión y recuerdos especiales!</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Send a Message Button -->
+    <button id="open-message-btn" aria-label="Enviar un Mensaje">
+      Enviar un Mensaje
+    </button>
+
+    <!-- Send a Message Modal -->
+    <div id="message-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="message-modal-title" aria-describedby="message-modal-desc">
+      <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <section class="message-section">
+          <h2 id="message-modal-title">Deja tu Mensaje para Galia</h2>
+          <p id="message-modal-desc">Comparte tus buenos deseos o un lindo recuerdo. </p>
+          
+          <form name="contact-galia" netlify data-netlify-honeypot="bot-field" method="POST">
+            <input type="hidden" name="form-name" value="contact-galia">
+            <p class="hidden">
+              <label>¿Robot? <input name="bot-field"></label>
+            </p>
+            
+            <label for="guestName">Tu Nombre</label>
+            <input id="guestName" name="name" type="text" placeholder="Tu nombre o familia" required>
+            
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" rows="4" placeholder="Escribe aquí tu mensaje..." required></textarea>
+            
+            <label for="photo">Sube una Foto (Opcional)</label>
+            <input id="photo" name="photo" type="file" accept="image/*">
+            
+            <div class="modal-buttons">
+              <button type="button" id="cancel-message-btn">Cancelar</button>
+              <button type="submit">Enviar Mensaje</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.min.js"></script>
+    <script src="index.js"></script>
+    <script src="js/countdown.js" defer></script>
+    <script src="js/celebration.js" defer></script>
+    <script src="js/modal.js" defer></script>
+    <script src="js/message.js" defer></script>
+</body>
+</html>
