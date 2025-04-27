@@ -22,27 +22,17 @@
                 <div class="hero-details">
                     <div class="hero-details-container">
                         <div class="hero-detail-item">
-                            <svg class="hero-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                            </svg>
+                            <img class="hero-icon" src="public/icons/map-pin.svg" alt="Ubicación">
                             <span>Club Ciclista Juanico</span>
                         </div>
                         <span class="hero-details-separator">|</span>
                         <div class="hero-detail-item">
-                            <svg class="hero-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                                <line x1="16" y1="2" x2="16" y2="6"/>
-                                <line x1="8" y1="2" x2="8" y2="6"/>
-                                <line x1="3" y1="10" x2="21" y2="10"/>
-                            </svg>
+                            <img class="hero-icon" src="public/icons/calendar.svg" alt="Fecha">
                             <span>Sábado, 10 de Mayo, 2025</span>
                         </div>
                         <span class="hero-details-separator">|</span>
                         <div class="hero-detail-item">
-                            <svg class="hero-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10"/>
-                                <polyline points="12 6 12 12 16 14"/>
-                            </svg>
+                            <img class="hero-icon" src="public/icons/clock.svg" alt="Hora">
                             <span>13:00 - 18:00</span>
                         </div>
                     </div>
@@ -87,19 +77,11 @@
                 <div class="details">
                     <h3>Detalles de la Fiesta</h3>
                     <p>
-                        <svg class="celebration-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                            <line x1="16" y1="2" x2="16" y2="6"/>
-                            <line x1="8" y1="2" x2="8" y2="6"/>
-                            <line x1="3" y1="10" x2="21" y2="10"/>
-                        </svg>
+                        <img class="celebration-icon" src="public/icons/calendar.svg" alt="Fecha">
                         Fecha: Sábado, 10 de Mayo, 2025
                     </p>
                     <p>
-                        <svg class="celebration-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"/>
-                            <polyline points="12 6 12 12 16 14"/>
-                        </svg>
+                        <img class="celebration-icon" src="public/icons/clock.svg" alt="Hora">
                         Hora: 1:00 PM – 6:00 PM
                     </p>
                 </div>
@@ -112,10 +94,7 @@
                     <h3>Ubicación</h3>
                     <p>Club Ciclista Juanico</p>
                     <button id="maps-button" aria-label="Abrir ubicación en Google Maps">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                            <circle cx="12" cy="10" r="3"/>
-                        </svg>
+                        <img src="public/icons/map-pin.svg" alt="Ubicación">
                         Ver en Google Maps
                     </button>
                 </div>
@@ -141,10 +120,64 @@
                     <div class="about-image">
                         <img src="https://galiacumple.netlify.app/_next/image?url=%2FGaliaHero1.gif&w=256&q=75" alt="Galia sonriendo">
                     </div>
-                    <div class="about-text">
-                        <p>¡Hola! Soy Galia, una pequeña aventurera que está a punto de cumplir su primer añito. Cada día es una nueva oportunidad para explorar, aprender y sonreír.</p>
-                        <p>Me encanta jugar, descubrir el mundo que me rodea y pasar tiempo con mi familia. Mis días están llenos de risas, juegos y momentos mágicos.</p>
-                        <p>Estoy emocionada de celebrar mi primer cumpleaños con todos ustedes. ¡Será un día lleno de amor, diversión y recuerdos especiales!</p>
+                    <div class="about-text space-y-4">
+                        <p class="flex items-center gap-3">
+                            <img src="public/icons/smile.svg" class="lucide lucide-smile h-5 w-5 text-yellow-500 flex-shrink-0" alt="Sonrisa">
+                            ¡Hola! Soy <strong>Galia</strong> 💖
+                        </p>
+                        <p class="flex items-center gap-3">
+                            <img src="public/icons/baby.svg" class="lucide lucide-baby h-5 w-5 text-blue-400 flex-shrink-0" alt="Bebé">
+                            Nací el <strong>10/05/2024</strong>
+                        </p>
+                        <p class="flex items-center gap-3">
+                            <img src="public/icons/ruler.svg" class="lucide lucide-ruler h-5 w-5 text-green-500 flex-shrink-0" alt="Regla">
+                            <span>Me gusta salir a pasear, mirar <strong>árboles</strong> y robar <strong>hojas</strong> 🍃</span>
+                        </p>
+                        <p class="flex items-start gap-3">
+                            <img src="public/icons/search.svg" class="lucide lucide-search h-5 w-5 text-gray-500 flex-shrink-0 mt-1" alt="Búsqueda">
+                            <span>Soy muy curiosa, ¡me encanta <strong>investigar todo</strong>!</span>
+                        </p>
+                        <p class="flex items-start gap-3">
+                            <img src="public/icons/smile.svg" class="lucide lucide-smile h-5 w-5 text-yellow-500 flex-shrink-0 mt-1" alt="Sonrisa">
+                            <span>Siempre ando <strong>sonriendo</strong>, mostrando mis dientitos y dando muchos <strong>besos</strong> 😘</span>
+                        </p>
+                        <p class="italic text-muted-foreground mt-5 text-center text-sm sm:text-base">Espero que esta guía sobre mí te sirva, pero lo que más me gusta es que me regales tu tiempo 💕.</p>
+                    </div>
+                    
+                    <div class="space-y-4 bg-secondary/10 p-4 sm:p-5 rounded-lg border border-secondary/30 shadow-inner">
+                        <h4 class="font-semibold text-lg sm:text-xl text-secondary-foreground flex items-center gap-2 mb-3">
+                            <img src="public/icons/gift.svg" class="h-5 w-5 sm:h-6 sm:w-6" alt="Regalo">
+                            Regalito (Opcional)
+                        </h4>
+                        <p id="r1" class="text-sm sm:text-base text-secondary-foreground/80">Si prefieres hacer un regalo monetario, mis papis facilitan esta opción:</p>
+                        <div class="flex items-start space-x-3 p-3 sm:p-4 bg-card rounded border border-secondary/40 shadow-sm">
+                            <img src="public/icons/landmark.svg" class="h-8 w-8 sm:h-10 sm:w-10 text-secondary mt-1 flex-shrink-0" aria-hidden="true" alt="Banco">
+                            <div class="flex-grow">
+                                <div class="mb-2">
+                                    <p class="text-xs font-medium text-muted-foreground mb-0.5">Banco</p>
+                                    <p class="font-semibold text-card-foreground text-base sm:text-lg">BROU</p>
+                                </div>
+                                <div class="mb-2">
+                                    <p class="text-xs font-medium text-muted-foreground mt-2 mb-0.5">Titular</p>
+                                    <p class="font-semibold text-card-foreground text-base sm:text-lg">MAURO PRESTES</p>
+                                </div>
+                                <div class="mb-2">
+                                    <p class="text-xs font-medium text-muted-foreground mt-2 mb-0.5">Número de Cuenta</p>
+                                    <div class="flex items-center gap-2 flex-wrap"> 
+                                        <p class="font-semibold text-card-foreground text-base sm:text-lg tabular-nums break-all">001782901-00001</p>
+                                        <button class="copy-button inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-8 w-8 text-secondary hover:bg-secondary/10 flex-shrink-0">
+                                            <img src="public/icons/copy.svg" class="h-4 w-4" alt="Copiar">
+                                            <span class="sr-only">Copiar número de cuenta</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-medium text-muted-foreground mt-2 mb-0.5">Moneda</p>
+                                    <p class="font-semibold text-card-foreground text-base sm:text-lg">Pesos Uruguayos ($)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-sm sm:text-base text-center text-secondary-foreground/80 mt-3">¡Tu presencia es el mejor regalo! 🎁</p>
                     </div>
                 </div>
             </section>
