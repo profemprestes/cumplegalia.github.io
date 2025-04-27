@@ -164,11 +164,8 @@
           <h2 id="message-modal-title">Deja tu Mensaje para Galia</h2>
           <p id="message-modal-desc">Comparte tus buenos deseos o un lindo recuerdo. </p>
           
-          <form name="contact-galia" netlify data-netlify-honeypot="bot-field" method="POST">
+          <form name="contact-galia" method="POST" netlify>
             <input type="hidden" name="form-name" value="contact-galia">
-            <p class="hidden">
-              <label>¿Robot? <input name="bot-field"></label>
-            </p>
             
             <label for="guestName">Tu Nombre</label>
             <input id="guestName" name="name" type="text" placeholder="Tu nombre o familia" required>

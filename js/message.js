@@ -42,23 +42,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Form submission handler
     const form = messageModal.querySelector('form');
     form.addEventListener('submit', (event) => {
-        event.preventDefault();
-        const formData = new FormData(form);
-
-        fetch('/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: new URLSearchParams(formData).toString()
-        })
-        .then(() => {
-            alert('¡Gracias por tu mensaje! Lo recibiremos pronto.');
-            closeModal();
-            form.reset();
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('Hubo un problema enviando tu mensaje. Por favor, inténtalo de nuevo.');
-        });
+        // Permitir que Netlify maneje el envío
+        // Solo mostrar confirmación y cerrar modal
+        alert('¡Gracias por tu mensaje! Lo recibiremos pronto.');
+        closeModal();
+        form.reset();
     });
 });
 
