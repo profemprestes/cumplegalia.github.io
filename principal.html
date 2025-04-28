@@ -8,18 +8,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     
     <!-- Estilos globales y base -->
-    <link rel="stylesheet" href="styles/global.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/hero-enhanced.css">
+    <link rel="stylesheet" href="styles/global.css" type="text/css">
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <link rel="stylesheet" href="css/hero-enhanced.css" type="text/css">
     
     <!-- Componentes específicos -->
-
-    <link rel="stylesheet" href="css/countdown2.css">
-    <link rel="stylesheet" href="css/celebration.css">
+    <link rel="stylesheet" href="css/countdown2.css" type="text/css">
+    <link rel="stylesheet" href="css/celebration.css" type="text/css">
     
-    <!-- Modales y elementos interactivos (últimos para sobrescribir) -->
-    <link rel="stylesheet" href="css/modal.css">
-    <link rel="stylesheet" href="css/message.css">
+    <!-- Modales y elementos interactivos -->
+    <link rel="stylesheet" href="css/modal.css" type="text/css">
+    <link rel="stylesheet" href="css/message.css" type="text/css">
     
     <!-- Meta tags adicionales -->
     <meta name="description" content="Invitación al primer cumpleaños de Galia">
@@ -203,9 +202,8 @@
             <button class="modal-close">&times;</button>
             <section class="about-section">
                 <h2 id="about-modal-title">Un poco sobre mí</h2>
-                <div class="about-content">
                     <div class="about-image">
-                        <img src="https://galiacumple.netlify.app/_next/image?url=%2FGaliaHero1.gif&w=256&q=75" alt="Galia sonriendo">
+                        <img src="public/GaliaHero.svg" alt="Galia sonriendo">
                     </div>
                     <div class="about-text space-y-4">
                         <p class="flex items-center gap-3">
@@ -217,55 +215,82 @@
                             Nací el <strong>10/05/2024</strong>
                         </p>
                         <p class="flex items-center gap-3">
-                            <img src="public/icons/ruler.svg" class="lucide lucide-ruler h-5 w-5 text-green-500 flex-shrink-0" alt="Regla">
-                            <span>Me gusta salir a pasear, mirar <strong>árboles</strong> y robar <strong>hojas</strong> 🍃</span>
+                            <img src="public/icons/ruler.svg" class="lucide lucide-ruler h-5 w-5 text-green-500 flex-shrink-0" alt="Medidas">
+                            Mido <strong>72 cm</strong> y peso <strong>10 kg</strong> - ¡Me dicen que soy una gordita preciosa! 🥰
+                        </p>
+                        <p class="flex items-start gap-3">
+                            <img src="public/icons/toy-brick.svg" class="lucide lucide-toy h-5 w-5 text-purple-500 flex-shrink-0 mt-1" alt="Juguetes">
+                            <span>Me encanta jugar con juguetes, ¡aunque prefiero las <strong>cajas y tuppers</strong>! 📦</span>
+                        </p>
+                        <p class="flex items-start gap-3">
+                            <img src="public/icons/shirt.svg" class="lucide lucide-shirt h-5 w-5 text-pink-500 flex-shrink-0 mt-1" alt="Ropa">
+                            <span>Me visto <strong>facherisima</strong> gracias a mi Mamá (papá no entiende nada de moda 🤭)</span>
+                        </p>
+                        <p class="flex items-start gap-3">
+                            <img src="public/icons/tree-pine.svg" class="lucide lucide-tree h-5 w-5 text-green-700 flex-shrink-0 mt-1" alt="Árbol">
+                            <span>Amo pasear, ver los <strong>árboles</strong> y... ¡arrancar alguna hojita cuando nadie me ve! 🍃</span>
                         </p>
                         <p class="flex items-start gap-3">
                             <img src="public/icons/search.svg" class="lucide lucide-search h-5 w-5 text-gray-500 flex-shrink-0 mt-1" alt="Búsqueda">
-                            <span>Soy muy curiosa, ¡me encanta <strong>investigar todo</strong>!</span>
+                            <span>Soy muy <strong>curiosa</strong>, ¡me encanta investigar todo lo que tengo alrededor! 🔍</span>
                         </p>
                         <p class="flex items-start gap-3">
                             <img src="public/icons/smile.svg" class="lucide lucide-smile h-5 w-5 text-yellow-500 flex-shrink-0 mt-1" alt="Sonrisa">
                             <span>Siempre ando <strong>sonriendo</strong>, mostrando mis dientitos y dando muchos <strong>besos</strong> 😘</span>
                         </p>
-                        <p class="italic text-muted-foreground mt-5 text-center text-sm sm:text-base">Espero que esta guía sobre mí te sirva, pero lo que más me gusta es que me regales tu tiempo 💕.</p>
+                        <p class="italic text-muted-foreground mt-5 text-center text-sm sm:text-base">Espero que esta guía sobre mí te sirva, pero lo que más me gusta es que me regales tu tiempo 💕</p>
                     </div>
                     
                     <div class="space-y-4 bg-secondary/10 p-4 sm:p-5 rounded-lg border border-secondary/30 shadow-inner">
                         <h4 class="font-semibold text-lg sm:text-xl text-secondary-foreground flex items-center gap-2 mb-3">
                             <img src="public/icons/gift.svg" class="h-5 w-5 sm:h-6 sm:w-6" alt="Regalo">
-                            Regalito (Opcional)
-                        </h4>
-                        <p id="r1" class="text-sm sm:text-base text-secondary-foreground/80">Si prefieres hacer un regalo monetario, mis papis facilitan esta opción:</p>
-                        <div class="flex items-start space-x-3 p-3 sm:p-4 bg-card rounded border border-secondary/40 shadow-sm">
-                            <img src="public/icons/landmark.svg" class="h-8 w-8 sm:h-10 sm:w-10 text-secondary mt-1 flex-shrink-0" aria-hidden="true" alt="Banco">
-                            <div class="flex-grow">
-                                <div class="mb-2">
-                                    <p class="text-xs font-medium text-muted-foreground mb-0.5">Banco</p>
-                                    <p class="font-semibold text-card-foreground text-base sm:text-lg">BROU</p>
-                                </div>
-                                <div class="mb-2">
-                                    <p class="text-xs font-medium text-muted-foreground mt-2 mb-0.5">Titular</p>
-                                    <p class="font-semibold text-card-foreground text-base sm:text-lg">MAURO PRESTES</p>
-                                </div>
-                                <div class="mb-2">
-                                    <p class="text-xs font-medium text-muted-foreground mt-2 mb-0.5">Número de Cuenta</p>
-                                    <div class="flex items-center gap-2 flex-wrap">
-                                        <p class="font-semibold text-card-foreground text-base sm:text-lg tabular-nums break-all">001782901-00001</p>
-                                        <button class="copy-button inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-8 w-8 text-secondary hover:bg-secondary/10 flex-shrink-0">
-                                            <img src="public/icons/copy.svg" class="h-4 w-4" alt="Copiar">
-                                            <span class="sr-only">Copiar número de cuenta</span>
-                                        </button>
+                            <div class="gift-section">
+                                <div class="gift-container">
+                                    <div class="gift-header">
+                                        <img src="public/icons/gift.svg" class="gift-icon" alt="Regalo">
+                                        <h4>Regalito (Opcional)</h4>
                                     </div>
-                                </div>
-                                <div>
-                                    <p class="text-xs font-medium text-muted-foreground mt-2 mb-0.5">Moneda</p>
-                                    <p class="font-semibold text-card-foreground text-base sm:text-lg">Pesos Uruguayos ($)</p>
+                                    
+                                    <p class="gift-description">Si prefieres hacer un regalo monetario, mis papis facilitan esta opción:</p>
+                                    
+                                    <div class="bank-info-card">
+                                        <div class="bank-header">
+                                            <img src="public/icons/landmark.svg" class="bank-icon" alt="Banco">
+                                            <span class="bank-title">Información Bancaria</span>
+                                        </div>
+                                        
+                                        <div class="bank-details">
+                                            <div class="bank-detail-item">
+                                                <label>Banco</label>
+                                                <span>BROU</span>
+                                            </div>
+                                            
+                                            <div class="bank-detail-item">
+                                                <label>Titular</label>
+                                                <span>MAURO PRESTES</span>
+                                            </div>
+                                            
+                                            <div class="bank-detail-item">
+                                                <label>Número de Cuenta</label>
+                                                <div class="account-number">
+                                                    <span>001782901-00001</span>
+                                                    <button class="copy-btn" aria-label="Copiar número de cuenta">
+                                                        <img src="public/icons/copy.svg" alt="Copiar">
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="bank-detail-item">
+                                                <label>Moneda</label>
+                                                <span>Pesos Uruguayos ($)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <p class="gift-footer">¡Tu presencia es el mejor regalo! 🎁</p>
                                 </div>
                             </div>
-                        </div>
-                        <p class="text-sm sm:text-base text-center text-secondary-foreground/80 mt-3">¡Tu presencia es el mejor regalo! 🎁</p>
-                    </div>
+
                 </div>
             </section>
         </div>

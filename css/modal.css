@@ -581,3 +581,215 @@ button[class*="inline-flex"] svg {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
+
+/* Estilos para la sección de regalo */
+.gift-section {
+    background: linear-gradient(135deg, rgba(204, 213, 174, 0.1), rgba(204, 213, 174, 0.2));
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(204, 213, 174, 0.3);
+    margin: 2rem 0;
+}
+
+.gift-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.gift-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.gift-icon {
+    width: 2rem;
+    height: 2rem;
+    color: var(--buff);
+}
+
+.gift-header h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--buff);
+    margin: 0;
+}
+
+.gift-description {
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.bank-info-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(204, 213, 174, 0.4);
+}
+
+.bank-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(204, 213, 174, 0.3);
+}
+
+.bank-icon {
+    width: 2rem;
+    height: 2rem;
+    color: var(--buff);
+}
+
+.bank-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--buff);
+}
+
+.bank-details {
+    display: grid;
+    gap: 1.25rem;
+}
+
+.bank-detail-item {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.bank-detail-item label {
+    font-size: 0.875rem;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+}
+
+.bank-detail-item span {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.account-number {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.copy-btn {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.copy-btn:hover {
+    background: rgba(204, 213, 174, 0.2);
+}
+
+.copy-btn img {
+    width: 1.25rem;
+    height: 1.25rem;
+    opacity: 0.7;
+}
+
+.gift-footer {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.7);
+    font-style: italic;
+}
+
+/* Estilos responsivos */
+@media (max-width: 640px) {
+    .gift-section {
+        padding: 1rem;
+    }
+    
+    .bank-info-card {
+        padding: 1rem;
+    }
+    
+    .gift-header h4 {
+        font-size: 1.25rem;
+    }
+    
+    .bank-detail-item span {
+        font-size: 1rem;
+    }
+}
+
+.modal-buttons button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.about-btn {
+    background-color: var(--buff);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.about-btn:hover {
+    transform: translateY(-2px);
+    background-color: color-mix(in srgb, var(--buff) 90%, white);
+}
+
+.about-section {
+    padding: 20px;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    border: 4px solid var(--buff);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+@media (max-width: 768px) {
+    .about-image {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+.modal-buttons button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
