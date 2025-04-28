@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="css/hero-enhanced.css">
     
     <!-- Componentes específicos -->
-    <link rel="stylesheet" href="css/countdown.css">
+
+    <link rel="stylesheet" href="css/countdown2.css">
     <link rel="stylesheet" href="css/celebration.css">
     
     <!-- Modales y elementos interactivos (últimos para sobrescribir) -->
@@ -22,7 +23,7 @@
     
     <!-- Meta tags adicionales -->
     <meta name="description" content="Invitación al primer cumpleaños de Galia">
-    <meta name="theme-color" content="#f8bbd0">
+    <meta name="theme-color" content="#ccd5aeff">
     <link rel="manifest" href="public/manifest.json">
     
     <!-- Precargar recursos críticos -->
@@ -65,38 +66,40 @@
                 </div>
             </div>
         </div>
-        <div id="hero-image-decor" class="hero-image-decoration">
-        <div id="hero-scroll-indicator" class="scroll-indicator">
-            <p id="hero-invitation-text" class="hero-invitation">¡Tu presencia hará este día aún más especial!</p>
-            <span id="hero-scroll-text">Desliza para ver más</span>
-            <div id="hero-scroll-arrow-container" class="scroll-arrow-container">
-                <div id="hero-scroll-arrow" class="scroll-arrow"></div>
-            </div>
-        </div>
-    </div>
+ 
     </div>
 
     <section id="countdown">
         <div class="countdown-container">
-            <div class="time-segment">
-                <span class="number" id="days">00</span>
-                <span class="label">Días</span>
+            <div class="countdown-item">
+                <div class="countdown-number">
+                    <span id="days">00</span>
+                </div>
+                <span class="countdown-label">Días</span>
             </div>
-            <div class="time-segment">
-                <span class="number" id="hours">00</span>
-                <span class="label">Horas</span>
+            <div class="countdown-separator">:</div>
+            <div class="countdown-item">
+                <div class="countdown-number">
+                    <span id="hours">00</span>
+                </div>
+                <span class="countdown-label">Horas</span>
             </div>
-            <div class="time-segment">
-                <span class="number" id="minutes">00</span>
-                <span class="label">Minutos</span>
+            <div class="countdown-separator">:</div>
+            <div class="countdown-item">
+                <div class="countdown-number">
+                    <span id="minutes">00</span>
+                </div>
+                <span class="countdown-label">Minutos</span>
             </div>
-            <div class="time-segment">
-                <span class="number" id="seconds">00</span>
-                <span class="label">Segundos</span>
+            <div class="countdown-separator">:</div>
+            <div class="countdown-item">
+                <div class="countdown-number">
+                    <span id="seconds">00</span>
+                </div>
+                <span class="countdown-label">Segundos</span>
             </div>
         </div>
     </section>
-
     <section id="celebration-section">
         <div class="celebration-container">
             <h2>¡Acompáñame a celebrar!</h2>
